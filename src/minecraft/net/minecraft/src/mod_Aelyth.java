@@ -36,6 +36,7 @@ public class mod_Aelyth extends BaseMod
 	}
 	
 	
+	// Réglage texture
 	
 	public void setupTexture()
 	{
