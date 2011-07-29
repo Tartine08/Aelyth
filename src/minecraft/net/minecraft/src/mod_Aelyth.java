@@ -7,6 +7,8 @@ public class mod_Aelyth extends BaseMod
 	public static int ObliviousGrassTexture;
 	public static int ObliviousLogTexture;
 	public static int ObliviousWoodTexture;
+	public static int ObliviousStoneTexture;
+	public static int ObliviousCobbleTexture;
 
 	public mod_Aelyth()
 	{
@@ -23,6 +25,8 @@ public class mod_Aelyth extends BaseMod
 		ModLoader.RegisterBlock(ObliviousGrass);
 		ModLoader.RegisterBlock(ObliviousLog);
 		ModLoader.RegisterBlock(ObliviousWood);
+		ModLoader.RegisterBlock(ObliviousStone);
+		ModLoader.RegisterBlock(ObliviousCobble);
 	}
 	
 	
@@ -33,10 +37,11 @@ public class mod_Aelyth extends BaseMod
 		ModLoader.AddName(ObliviousGrass, "Oblivious Grass");
 		ModLoader.AddName(ObliviousLog, "Oblivious Log");
 		ModLoader.AddName(ObliviousWood, "Oblivious Wood");
+		ModLoader.AddName(ObliviousStone, "Oblivious Stone");
+		ModLoader.AddName(ObliviousCobble, "Oblivious Cobblestone");
 	}
 	
 	
-	// Réglage texture
 	
 	public void setupTexture()
 	{
@@ -44,6 +49,15 @@ public class mod_Aelyth extends BaseMod
 		ObliviousGrassTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousGrass.png");
 		ObliviousLogTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousLog.png");
 		ObliviousWoodTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousWood.png");
+		ObliviousStoneTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousStone.png");
+		ObliviousCobbleTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousCobble.png");
+	}
+	
+	
+	
+	public void AddRecipe()
+	{
+		
 	}
 	
 	
@@ -65,8 +79,21 @@ public class mod_Aelyth extends BaseMod
 	
 	public static final Block ObliviousWood = (new BlockObliviousWood(103, ObliviousWoodTexture))
 													.setHardness(2.0F)
+													.setResistance(5F)
 													.setStepSound(Block.soundWoodFootstep)
 													.setBlockName("obliviouslog");
+	
+	public static final Block ObliviousStone = (new BlockObliviousStone(104, ObliviousStoneTexture))
+													.setHardness(2.0F)
+													.setResistance(10F)
+													.setStepSound(Block.soundStoneFootstep)
+													.setBlockName("obliviousstone");
+	
+	public static final Block ObliviousCobble = (new BlockObliviousCobble(105, ObliviousCobbleTexture))
+													.setHardness(1.8F)
+													.setResistance(8F)
+													.setStepSound(Block.soundStoneFootstep)
+													.setBlockName("obliviouscobble");
 	
 	
 	
