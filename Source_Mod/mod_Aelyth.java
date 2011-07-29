@@ -4,6 +4,7 @@ public class mod_Aelyth extends BaseMod
 {
 	
 	public static int ObliviousDirtTexture;
+	public static int ObliviousGrassTexture;
 
 	public mod_Aelyth()
 	{
@@ -17,6 +18,7 @@ public class mod_Aelyth extends BaseMod
 	public void RegisterBlock()
 	{
 		ModLoader.RegisterBlock(ObliviousDirt);
+		ModLoader.RegisterBlock(ObliviousGrass);
 	}
 	
 	
@@ -24,6 +26,7 @@ public class mod_Aelyth extends BaseMod
 	public void setupBlockName()
 	{
 		ModLoader.AddName(ObliviousDirt, "Oblivious Dirt");
+		ModLoader.AddName(ObliviousGrass, "Oblivious Grass");
 	}
 	
 	
@@ -31,6 +34,7 @@ public class mod_Aelyth extends BaseMod
 	public void setupTexture()
 	{
 		ObliviousDirtTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousDirt.png");
+		ObliviousGrassTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousGrass.png");
 	}
 	
 	
@@ -39,6 +43,11 @@ public class mod_Aelyth extends BaseMod
 													.setHardness(0.6F)
 													.setStepSound(Block.soundGravelFootstep)
 													.setBlockName("obliviousdirt");
+	
+	public static final Block ObliviousGrass = (new BlockObliviousGrass(101, ObliviousGrassTexture))
+													.setHardness(0.7F)
+													.setStepSound(Block.soundGrassFootstep)
+													.setBlockName("obliviousgrass");
 	
 	
 	
