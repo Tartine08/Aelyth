@@ -36,7 +36,7 @@ public class mod_Aelyth extends BaseMod
 	
 	
 	public static final Block ObliviousDirt = (new BlockObliviousDirt(100, ObliviousDirtTexture))
-													.setHardness(0.7F)
+													.setHardness(0.6F)
 													.setStepSound(Block.soundGravelFootstep)
 													.setBlockName("obliviousdirt");
 	
