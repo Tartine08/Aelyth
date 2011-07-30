@@ -9,6 +9,7 @@ public class mod_Aelyth extends BaseMod
 	public static int ObliviousWoodTexture;
 	public static int ObliviousStoneTexture;
 	public static int ObliviousCobbleTexture;
+    public static int ObliviousSandTexture;
 
 	public mod_Aelyth()
 	{
@@ -27,6 +28,7 @@ public class mod_Aelyth extends BaseMod
 		ModLoader.RegisterBlock(ObliviousWood);
 		ModLoader.RegisterBlock(ObliviousStone);
 		ModLoader.RegisterBlock(ObliviousCobble);
+		ModLoader.RegisterBlock(ObliviousSand);
 	}
 	
 	
@@ -39,6 +41,7 @@ public class mod_Aelyth extends BaseMod
 		ModLoader.AddName(ObliviousWood, "Oblivious Wood");
 		ModLoader.AddName(ObliviousStone, "Oblivious Stone");
 		ModLoader.AddName(ObliviousCobble, "Oblivious Cobblestone");
+	    ModLoader.AddName(ObliviousCobble, "Oblivious Sand");
 	}
 	
 	
@@ -51,6 +54,7 @@ public class mod_Aelyth extends BaseMod
 		ObliviousWoodTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousWood.png");
 		ObliviousStoneTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousStone.png");
 		ObliviousCobbleTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousCobble.png");
+		ObliviousCobbleTexture = ModLoader.addOverride("/terrain.png", "/Aelyth/ObliviousSand.png");
 	}
 	
 	
@@ -94,6 +98,12 @@ public class mod_Aelyth extends BaseMod
 													.setResistance(8F)
 													.setStepSound(Block.soundStoneFootstep)
 													.setBlockName("obliviouscobble");
+													
+	public static final Block ObliviousSand = (new BlockObliviousSand(106, ObliviousSandTexture))
+													.setHardness(0.5F)
+													.setResistance(8F)
+													.setStepSound(Block.soundSandFootstep)
+													.setBlockName("oblivioussand");													
 	
 	
 	
